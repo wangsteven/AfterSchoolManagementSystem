@@ -186,6 +186,7 @@
             this.Controls.Add(this.bindingNavigator_student);
             this.Name = "StudentView";
             this.Text = "StudentForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_student)).EndInit();
             this.bindingNavigator_student.ResumeLayout(false);
             this.bindingNavigator_student.PerformLayout();

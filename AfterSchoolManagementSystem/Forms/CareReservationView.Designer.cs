@@ -185,6 +185,7 @@
             this.Controls.Add(this.bindingNavigator_careReservation);
             this.Name = "CareReservationView";
             this.Text = "CareReservationView";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_careReservation)).EndInit();
             this.bindingNavigator_careReservation.ResumeLayout(false);
             this.bindingNavigator_careReservation.PerformLayout();

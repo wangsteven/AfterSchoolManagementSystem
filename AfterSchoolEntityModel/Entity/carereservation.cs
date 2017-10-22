@@ -14,6 +14,8 @@ namespace AfterSchoolEntityModel
 
         public int weekday { get; set; }
 
+        public bool active { get; set; }
+
         [MaxLength(10)]
         public string startTime { get; set; }
 
@@ -39,5 +41,7 @@ namespace AfterSchoolEntityModel
 
         [MaxLength(45)]
         public string description { get; set; }
+
+       
     }
 }
