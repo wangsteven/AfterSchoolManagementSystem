@@ -73,9 +73,9 @@
     <Compile Include="StudentSelection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CreateDB_MySql.sql" />
-    <Content Include="createDB_Sqlite.sql" />
-    <Content Include="ResoveIsPrimaryKeyIssue.txt" />
+    <None Include="CreateDB_MySql.sql" />
+    <None Include="createDB_Sqlite.sql" />
+    <None Include="ResoveIsPrimaryKeyIssue.txt" />
     <Content Include="sqlite3.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

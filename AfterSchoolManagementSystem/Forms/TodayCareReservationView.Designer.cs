@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TodayCareReservationView));
             this.bindingNavigator_careReservation = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -41,14 +40,15 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBox_Weekday = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel_Create = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton_Create = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_Export = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView_careReservation = new System.Windows.Forms.DataGridView();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView_careReservation = new System.Windows.Forms.DataGridView();
             this.bindingSource_careReservation = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_careReservation)).BeginInit();
             this.bindingNavigator_careReservation.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             // bindingNavigator_careReservation
             // 
-            this.bindingNavigator_careReservation.AddNewItem = null;// this.bindingNavigatorAddNewItem;
+            this.bindingNavigator_careReservation.AddNewItem = null;
             this.bindingNavigator_careReservation.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator_careReservation.DeleteItem = null;
             this.bindingNavigator_careReservation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -89,16 +89,6 @@
             this.bindingNavigator_careReservation.Size = new System.Drawing.Size(1008, 25);
             this.bindingNavigator_careReservation.TabIndex = 0;
             this.bindingNavigator_careReservation.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "新添";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -167,6 +157,16 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "新添";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -213,7 +213,7 @@
             this.toolStripButton_Create.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Create.Name = "toolStripButton_Create";
             this.toolStripButton_Create.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton_Create.Text = "toolStripButton1";
+            this.toolStripButton_Create.Text = "生成今日托管预约单";
             this.toolStripButton_Create.Click += new System.EventHandler(this.toolStripButton_Create_Click);
             // 
             // toolStripButton_Export
@@ -223,8 +223,18 @@
             this.toolStripButton_Export.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Export.Name = "toolStripButton_Export";
             this.toolStripButton_Export.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton_Export.Text = "toolStripButton2";
+            this.toolStripButton_Export.Text = "保存今日托管预约单";
             this.toolStripButton_Export.Click += new System.EventHandler(this.toolStripButton_Export_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::AfterSchoolManagementSystem.Properties.Resources.Refresh_icon;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Visible = false;
             // 
             // dataGridView_careReservation
             // 
@@ -236,15 +246,6 @@
             this.dataGridView_careReservation.Size = new System.Drawing.Size(1008, 705);
             this.dataGridView_careReservation.TabIndex = 1;
             this.dataGridView_careReservation.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_careReservation_CellValueChanged);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::AfterSchoolManagementSystem.Properties.Resources.Refresh_icon;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // TodayCareReservationView
             // 
