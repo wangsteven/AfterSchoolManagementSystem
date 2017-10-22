@@ -1,0 +1,14 @@
+﻿use afterschool;
+set global optimizer_switch='derived_merge=off';
+set optimizer_switch='derived_merge=off';
+
+select @@optimizer_switch;
+select @@GLOBAL.optimizer_switch;
+
+
+Every answer above works fine, but when the server or dev-machine is restarted, we need to make all steps again and again. 
+To solve completely, we can put this attibute 'derived_merge=OFF' in the mysql configuration. 
+Ok, to do that, you need to access your MySQL server with de MySQL Workbench, 
+and open "Option File" > Select Performance tab. In Optimizer group, look for optimizer_switch, 
+click the checkbox to enable a field, and put 'derived_merge=OFF'. 
+Restart your server in services.msc

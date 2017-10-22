@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+
+using System.ComponentModel;
+
+namespace AfterSchoolEntityModel
+{
+    public class CareRecordList : BindingList<carerecord>
+    {
+        private static CareRecordList instance;
+        
+        public  static CareRecordList Instance
+        {
+            get
+            {
+                // Uses "Lazy initialization"
+                if (instance == null)
+                    instance = new CareRecordList();
+
+                return instance;
+            }
+        }
+        
+        public Datetime SelDate
+        {
+            get;
+            set;
+        } 
+    }
+}
