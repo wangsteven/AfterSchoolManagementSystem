@@ -25,6 +25,8 @@ namespace AfterSchoolManagementSystem.Views
 
         int GetSelStudentId();
 
+        bool GetImportingMode();
+
         event EventHandler QueryEventHandler;
         event EventHandler ImportEventHandler;
         event EventHandler SaveEventHandler;

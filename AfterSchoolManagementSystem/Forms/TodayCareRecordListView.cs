@@ -30,7 +30,13 @@ namespace AfterSchoolManagementSystem.Forms
             _selectAll = true;
             _selStudentId = -1;
             _importingMode = true;
+
         }
+
+        public bool GetImportingMode ()
+        {
+            return _importingMode; 
+        } 
 
         public event EventHandler QueryEventHandler;
         public event EventHandler ImportEventHandler;
@@ -92,12 +98,14 @@ namespace AfterSchoolManagementSystem.Forms
         {
             ImportEventHandler(sender, e);
             _importingMode = true;
+
         }
 
         private void button_save_Click(object sender, EventArgs e)
         {
             SaveEventHandler(sender, e);
             _importingMode = false;
+   
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -109,6 +117,9 @@ namespace AfterSchoolManagementSystem.Forms
         {
             QueryEventHandler(sender, e);
             _importingMode = false;
+
         }
+
+
     }
 }

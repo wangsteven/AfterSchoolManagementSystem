@@ -29,6 +29,7 @@ namespace AfterSchoolManagementSystem.Forms
             _endD = DateTime.Now.AddDays(1);
             _selectAll = true;
             _selStudentId = -1;
+            ImportEventHandler = null;
         }
 
         public event EventHandler QueryEventHandler;

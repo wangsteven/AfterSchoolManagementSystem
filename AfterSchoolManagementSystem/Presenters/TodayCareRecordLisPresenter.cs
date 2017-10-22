@@ -60,7 +60,7 @@ namespace AfterSchoolManagementSystem.Presenters
         private void View_SaveEventHandler(object sender, System.EventArgs e)
         {
             GetLatestSelection();
-            _CareRecordListInstace.SaveCareRecordList(true);
+            _CareRecordListInstace.SaveCareRecordList(View.GetImportingMode());
             View.SetDataSource();
         }
 

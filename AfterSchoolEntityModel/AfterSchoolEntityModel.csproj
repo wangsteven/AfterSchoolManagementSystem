@@ -50,6 +50,9 @@
     <Compile Include="CurrentCareReservationList.cs" />
     <Compile Include="DBModel.cs" />
     <Compile Include="DBOperation.cs" />
+    <Compile Include="Entity\studentBookkeeping.cs" />
+    <Compile Include="Entity\orgnizationBookkeeping.cs" />
+    <Compile Include="Entity\transaction.cs" />
     <Compile Include="Entity\carerecord.cs" />
     <Compile Include="Entity\CareRecordItem.cs" />
     <Compile Include="Entity\carereservation.cs" />
