@@ -71,6 +71,7 @@
     <Compile Include="Entity\teacher.cs" />
     <Compile Include="Entity\teacherattendace.cs" />
     <Compile Include="StudentSelection.cs" />
+    <Compile Include="TeacherList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CreateDB_MySql.sql" />

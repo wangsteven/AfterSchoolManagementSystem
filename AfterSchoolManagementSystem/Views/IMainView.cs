@@ -9,6 +9,7 @@ namespace AfterSchoolManagementSystem.Views
     public interface IMainView : ICoreView
     {
         event EventHandler LoadStudentForm;
+        event EventHandler LoadTeacherListForm;
         event EventHandler LoadTodayCareReservationForm;
         event EventHandler LoadCareRecordForm;
         event EventHandler LoadTodayCareRecordListForm;

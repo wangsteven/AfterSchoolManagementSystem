@@ -154,7 +154,6 @@ namespace AfterSchoolEntityModel
                 maxid  =SQLiteHelper.Instance.CreateCommand("select max(carereservationid) from carereservation").ExecuteScalar<int>();
             }
             catch { }
-
             return maxid;
         }
 
@@ -167,6 +166,17 @@ namespace AfterSchoolEntityModel
             }
             catch { }
 
+            return maxid;
+        }
+
+        public int GetMaxTeacherId()
+        {
+            int maxid = 0;
+            try
+            {
+                maxid = SQLiteHelper.Instance.CreateCommand("select max(teacherId) from teacher").ExecuteScalar<int>();
+            }
+            catch { }
             return maxid;
         }
 

@@ -32,6 +32,7 @@
             this.button_careReservation = new System.Windows.Forms.Button();
             this.button_careRecord = new System.Windows.Forms.Button();
             this.button_todayCareRecord = new System.Windows.Forms.Button();
+            this.button_teacher = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_student
@@ -40,7 +41,7 @@
             this.button_student.Name = "button_student";
             this.button_student.Size = new System.Drawing.Size(94, 23);
             this.button_student.TabIndex = 0;
-            this.button_student.Text = "学生管理系统";
+            this.button_student.Text = "学生登记系统";
             this.button_student.UseVisualStyleBackColor = true;
             this.button_student.Click += new System.EventHandler(this.button_student_Click);
             // 
@@ -74,6 +75,16 @@
             this.button_todayCareRecord.UseVisualStyleBackColor = true;
             this.button_todayCareRecord.Click += new System.EventHandler(this.button_todayCareRecord_Click);
             // 
+            // button_teacher
+            // 
+            this.button_teacher.Location = new System.Drawing.Point(218, 27);
+            this.button_teacher.Name = "button_teacher";
+            this.button_teacher.Size = new System.Drawing.Size(94, 23);
+            this.button_teacher.TabIndex = 0;
+            this.button_teacher.Text = "教师登记系统";
+            this.button_teacher.UseVisualStyleBackColor = true;
+            this.button_teacher.Click += new System.EventHandler(this.button_teacher_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -82,6 +93,7 @@
             this.Controls.Add(this.button_todayCareRecord);
             this.Controls.Add(this.button_careRecord);
             this.Controls.Add(this.button_careReservation);
+            this.Controls.Add(this.button_teacher);
             this.Controls.Add(this.button_student);
             this.Name = "MainView";
             this.Text = "AfterSchoolManagementSystem";
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button button_careReservation;
         private System.Windows.Forms.Button button_careRecord;
         private System.Windows.Forms.Button button_todayCareRecord;
+        private System.Windows.Forms.Button button_teacher;
     }
 }

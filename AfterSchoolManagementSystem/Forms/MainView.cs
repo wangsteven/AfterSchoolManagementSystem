@@ -18,6 +18,7 @@ namespace AfterSchoolManagementSystem.Forms
 
         public event EventHandler ViewLoding;
         public event EventHandler LoadStudentForm;
+        public event EventHandler LoadTeacherListForm;
         public event EventHandler LoadTodayCareReservationForm;
         public event EventHandler LoadCareRecordForm;
         public event EventHandler LoadTodayCareRecordListForm;
@@ -74,6 +75,14 @@ namespace AfterSchoolManagementSystem.Forms
             if (LoadTodayCareRecordListForm != null)
             {
                 LoadTodayCareRecordListForm.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        private void button_teacher_Click(object sender, EventArgs e)
+        {
+            if (LoadTeacherListForm != null)
+            {
+                LoadTeacherListForm.Invoke(this, EventArgs.Empty);
             }
         }
     }

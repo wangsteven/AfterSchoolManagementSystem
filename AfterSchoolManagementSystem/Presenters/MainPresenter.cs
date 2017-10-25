@@ -19,6 +19,7 @@ namespace AfterSchoolManagementSystem.Presenters
             View.LoadTodayCareReservationForm += View_TodayCareReservationForm;
             View.LoadCareRecordForm += View_LoadCareRecordForm;
             View.LoadTodayCareRecordListForm += View_LoadTodayCareRecordListForm;
+            View.LoadTeacherListForm += View_LoadTeacherListForm;
 
         }
 
@@ -49,6 +50,12 @@ namespace AfterSchoolManagementSystem.Presenters
         private void View_LoadTodayCareRecordListForm(object sender, EventArgs e)
         {
             var type = GetViewTypeFromInterface(typeof(ITodayCareRecordListView));
+            View.LoadChildForm(type);
+        }
+
+        private void View_LoadTeacherListForm(object sender, EventArgs e)
+        {
+            var type = GetViewTypeFromInterface(typeof(ITeacherListView));
             View.LoadChildForm(type);
         }
 
